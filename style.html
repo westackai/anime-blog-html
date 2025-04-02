@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>style details page</title>
+    <link rel="stylesheet" href="/style.css">
+    <script src="/assets/js/script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-main">
+                <div id="category"></div>
+                <script>
+                    fetch("category.html")
+                        .then(response => response.text())
+                        .then(data => {
+                            document.getElementById("category").innerHTML = data;
+                        })
+                        .catch(error => console.error("Error loading the category:", error));
+                </script>
+            </div>
+            <!-- <div class="header-top">
+                <div class="top-date">
+                    Monday, March 24, 2025
+                </div>
+                <div class="top-menu">
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                    <a href="#">Sign in / Join</a>
+                </div>
+            </div> -->
+
+        </div>
+    </header>
+    <main class="container">
+        <div class="detail-category-bar">
+            <a href="/index.html">
+                <p>HOME</p>
+            </a>
+            <div class="grey-bar">|</div>
+            <a href="/category.html">
+                <p>STYLE</p>
+            </a>
+        </div>
+    </main>
+    <div class="news-container container">
+        <section class="style-grid-section">
+            <div class="sibling-category">
+                <div class="sibling-category-div">
+                    <ul>
+                        <li>BEAUTY</li>
+                        <li>ENTERTAINMENT</li>
+                        <li>FASHION</li>
+                        <li>HOLLYWOOD</li>
+                    </ul>
+                </div>
+            </div>
+                <div class="heading-container">
+                    <div class="style-heading-line"></div>
+                </div>
+                <span class="style-heading-text">style</span>
+
+                <div class="style-grid">
+                    <div class="style-card">
+                        <div class="style-card-img">
+                            <img src="/assets/img/7.jpg" alt="Beach photo shoot">
+                        </div>
+                        <div class="style-card-content">
+                            <span class="category">Movies</span>
+                            <h3 class="style-card-title">
+                                <a href="#">INSTAGRAM HAIR IDEAS TO TRY: INSPIRATIONAL INFLUENCERS TO FOLLOW</a>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="style-card">
+                        <div class="style-card-img">
+                            <img src="/assets/img/8.jpg" alt="Retro chic style">
+                        </div>
+                        <div class="style-card-content">
+                            <span class="category">STYLE</span>
+                            <h3 class="style-card-title">
+                                <a href="#">EXPERT ADVICE: THE BEST CHEAP RETRO CHIC style FOR THIS FALL</a>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="style-card">
+                        <div class="style-card-img">
+                            <img src="/assets/img/9.jpg" alt="Wedding outfit ideas">
+                        </div>
+                        <div class="style-card-content">
+                            <span class="category">WHAT'S HOT</span>
+                            <h3 class="style-card-title">
+                                <a href="#">STYLE SPY: FASHION MODEL GOES CASUAL IN DISTINCT AND ORIGINAL WAY</a>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="style-card">
+                        <div class="style-card-img">
+                            <img src="/assets/img/10.jpg" alt="Model in Thailand">
+                        </div>
+                        <div class="style-card-content">
+                            <span class="category">style</span>
+                            <h3 class="style-card-title">
+                                <a href="#">WHAT MAKEUP TO WEAR DAILY, NO MATTER WHAT YOU’VE GOT PLANNED</a>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="style-card">
+                        <div class="style-card-img">
+                            <img src="/assets/img/11.jpg" alt="style model casual">
+                        </div>
+                        <div class="style-card-content">
+                            <span class="category">STYLE</span>
+                            <h3 class="style-card-title">
+                                <a href="#">GET INSIDE A FASHION BLOGGER’S FANCY LIFESTYLE AND BE AMAZED</a>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="style-card">
+                        <div class="style-card-img">
+                            <img src="/assets/img/12.jpg" alt="Accessories">
+                        </div>
+                        <div class="style-card-content">
+                            <span class="category">WHAT'S HOT</span>
+                            <h3 class="style-card-title">
+                                <a href="#">THE TRAVEL INSURANCE CATCH THAT CAN DOUBLE YOUR COVER IN TWO MONTHS</a>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="style-card">
+                        <div class="style-card-img">
+                            <img src="/assets/img/13.jpg" alt="Beach photo shoot">
+                        </div>
+                        <div class="style-card-content">
+                            <span class="category">Movies</span>
+                            <h3 class="style-card-title">
+                                <a href="#">THE WEIRDEST PLACES ASHES HAVE BEEN SCATTERED IN SOUTH AMERICA</a>
+                            </h3>
+                        </div>
+                    </div>
+
+                    <div class="style-card">
+                        <div class="style-card-img">
+                            <img src="/assets/img/14.jpg" alt="Retro chic style">
+                        </div>
+                        <div class="style-card-content">
+                            <span class="category">STYLE</span>
+                            <h3 class="style-card-title">
+                                <a href="#">THESE FABULOUS PHOTOS WILL HAVE ASTONISHING IMPACT FOR ANY CAMPAIGN</a>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="style-card">
+                        <div class="style-card-img">
+                            <img src="/assets/img/15.jpg" alt="Retro chic style">
+                        </div>
+                        <div class="style-card-content">
+                            <span class="category">STYLE</span>
+                            <h3 class="style-card-title">
+                                <a href="#">WATCH AWESOME KATE MANNER GO FULL DANCING PRO IN PERU THIS WEEK</a>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="style-card">
+                        <div class="style-card-img">
+                            <img src="/assets/img/16.jpg" alt="Retro chic style">
+                        </div>
+                        <div class="style-card-content">
+                            <span class="category">STYLE</span>
+                            <h3 class="style-card-title">
+                                <a href="#">SMALL YACHT MARKET AFFECTED BY THE FULMINANT SLASHED INVESTMENTS</a>
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <div>
+            <div class="style-advertisement">
+                <img src="/assets/img/rec2.png" alt="news paper style">
+                <div class="heading-container">
+                    <span class="heading-text">CATEGORIES</span>
+                    <div class="heading-line"></div>
+                </div>
+                <div class="category-heading-container">
+                    <ul class="category-ul-list">
+                        <li class="list-item"><span class="list-category">Hollywood</span> <span class="list-count">10</span></li>  
+                        <li class="list-item"><span class="list-category">Music</span> <span class="list-count">10</span></li>  
+                        <li class="list-item"><span class="list-category">Entertainment</span> <span class="list-count">10</span></li>  
+                        <li class="list-item"><span class="list-category">Modeling</span> <span class="list-count">10</span></li>  
+                        <li class="list-item"><span class="list-category">Beauty</span> <span class="list-count">10</span></li>  
+                        <li class="list-item"><span class="list-category">Fashion</span> <span class="list-count">10</span></li> 
+                    </ul>
+                </div>
+            </div>
+            <div class="must-read-section">
+                <div class="heading-container">
+                    <span class="heading-text">Must Read</span>
+                    <div class="heading-line"></div>
+                </div>
+    
+                <div class="must-read-item">
+                    <div class="must-read-img">
+                        <img src="https://demo.tagdiv.com/newspaper_gossip_pro/wp-content/uploads/2019/12/11-696x1044.jpg"
+                            alt="Must read 1">
+                    </div>
+                    <div class="must-read-content">
+                        <div class="category">ENTERTAINMENT</div>
+                        <h3><a href="#">BUZZ: MEGAN RYAN GETS AN EMMY AWARD ON HER 25 YEAR OLD BIRTHDAY</a></h3>
+                    </div>
+                </div>
+    
+                <div class="must-read-item">
+                    <div class="must-read-img">
+                        <img src="https://demo.tagdiv.com/newspaper_gossip_pro/wp-content/uploads/2019/12/10-696x464.jpg"
+                            alt="Must read 1">
+                    </div>
+                    <div class="must-read-content">
+                        <div class="category">MUSIC</div>
+                        <h3><a href="#">MUSIC IN YOUR HOME: PREMIUM SOUND SYSTEMS OFFER ASTOUNDING QUALITY</a></h3>
+                    </div>
+                </div>
+                <div class="must-read-item">
+                    <div class="must-read-img">
+                        <img src="https://demo.tagdiv.com/newspaper_gossip_pro/wp-content/uploads/2019/12/9-696x464.jpg"
+                            alt="Must read 1">
+                    </div>
+                    <div class="must-read-content">
+                        <div class="category">MUSIC</div>
+                        <h3><a href="#">THESE GUYS ARE MAKING MORE MONEY THAN ANYBODY COULD HAVE EVER GUESSED</a></h3>
+                    </div>
+                </div>
+                <div class="must-read-item">
+                    <div class="must-read-img">
+                        <img src="https://demo.tagdiv.com/newspaper_gossip_pro/wp-content/uploads/2019/12/27.jpg"
+                            alt="Must read 1">
+                    </div>
+                    <div class="must-read-content">
+                        <div class="category">Style</div>
+                        <h3><a href="#">Reality Star Launches New Business Venture</a></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
