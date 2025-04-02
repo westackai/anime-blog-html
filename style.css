@@ -227,13 +227,18 @@
     display: none;
   }
  }
-
+ .carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
  .articles-container {
    max-width: 1200px;
    margin: 0 auto;
    display: flex;
    justify-content: space-between;
    padding: 0 20px;
+   transition: transform 0.5s ease-in-out;
  }
 
  .article {
@@ -244,6 +249,8 @@
    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
    background-color: white;
    border-radius: 4px;
+   flex: 0 0 calc(25% - 10px); /* 4 items at a time */
+   box-sizing: border-box;
  }
 
  .article-img {
@@ -292,6 +299,9 @@
    border-radius: 50%;
    font-size: 18px;
    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+   cursor: pointer;
+   padding: 10px;
+   user-select: none;
  }
 
  .nav-btn:hover {
