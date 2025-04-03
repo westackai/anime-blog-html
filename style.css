@@ -25,13 +25,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Oswald", sans-serif;
+
 }
 
 body {
   background-color: #ffffff;
   color: #111;
   line-height: 1.5;
+  font-family: "Oswald", sans-serif;
 }
 
 a {
@@ -664,7 +665,9 @@ footer {
   background-color: black;
   color: #fff;
   padding: 50px 0 0;
+  font-family: "Montserrat", sans-serif !important;
   text-transform: uppercase;
+ 
 }
 
 .footer-widgets {
@@ -674,8 +677,6 @@ footer {
   margin-bottom: 40px;
 }
 
-.footer-widget {
-}
 
 .footer-widget h3 {
   font-size: 20px;
@@ -687,11 +688,12 @@ footer {
 .footer-widget p {
   color: #fff;
   margin-bottom: 15px;
+ 
 }
 
 .footer-widget ul {
-  font-family: "Montserrat" !important;
   list-style: none;
+  font-family: "Montserrat";
 }
 
 .footer-widget ul li {
@@ -699,6 +701,7 @@ footer {
   padding: 10px 0;
   cursor: pointer !important;
   line-height: 1;
+  letter-spacing: 1.2;
 }
 
 .footer-widget ul li a {
