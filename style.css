@@ -25,14 +25,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
 
 body {
   background-color: #ffffff;
   color: #111;
   line-height: 1.5;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald";
 }
 
 a {
@@ -667,7 +666,6 @@ footer {
   padding: 50px 0 0;
   font-family: "Montserrat", sans-serif !important;
   text-transform: uppercase;
- 
 }
 
 .footer-widgets {
@@ -676,7 +674,6 @@ footer {
   gap: 30px;
   margin-bottom: 40px;
 }
-
 
 .footer-widget h3 {
   font-size: 20px;
@@ -688,7 +685,6 @@ footer {
 .footer-widget p {
   color: #fff;
   margin-bottom: 15px;
- 
 }
 
 .footer-widget ul {
@@ -1396,6 +1392,7 @@ footer {
 /* Main content styles */
 .page-content {
   display: flex;
+  gap: 20px;
   background-color: white;
   position: relative;
   margin-bottom: 50px;
@@ -1432,7 +1429,7 @@ footer {
 
 .article-content {
   width: 77%;
-  padding: 20px;
+
   padding-top: 0px;
 }
 
@@ -1529,7 +1526,6 @@ footer {
   justify-content: center;
 }
 
-
 .social-share a {
   display: inline-block;
   width: 48px;
@@ -1584,7 +1580,7 @@ footer {
 }
 .contents-body {
   padding: 0 20px;
-color: #0E0E0E;
+  color: #0e0e0e;
   overflow: hidden;
   transition: max-height 0.5s ease;
 }
@@ -1603,7 +1599,7 @@ color: #0E0E0E;
   width: 100%;
   border-bottom: 1px solid #eee;
 }
-.list-item-1{
+.list-item-1 {
   margin-bottom: 10px;
   font-size: 14px !important;
   padding: 10px 0;
@@ -1619,8 +1615,8 @@ color: #0E0E0E;
   align-items: center;
   width: 100%;
 }
-.contents-list a:hover{
-color: #FF0000;
+.contents-list a:hover {
+  color: #ff0000;
 }
 .item-number {
   display: inline-flex;
@@ -1636,7 +1632,6 @@ color: #FF0000;
   font-size: 12px;
 }
 .item-title {
-  
   font-weight: 600;
   flex: 1;
 }
