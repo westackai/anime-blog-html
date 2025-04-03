@@ -1616,9 +1616,27 @@ max-height: 400px;
 }
 
 .related-article .category {
+  display: flex;
+  gap: 10px;
+  border-top: 2px solid red;
+  width: 100%;
+
   color: #e63333;
   font-size: 12px;
   text-transform: uppercase;
+}
+.number-category{
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: red;
+  color: white;
+}
+.related-article .category p {
+  padding-top: 5px;
 }
 
 /* Newsletter Form */
