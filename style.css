@@ -533,9 +533,41 @@ header {
   color: #888;
 }
 
-/* Must Read Side Section */
-.must-read-section {
+
+/* Latest  post */
+.latest-posts{
+ padding-bottom: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border: 1px solid #eee;
 }
+
+.latest-posts-img{
+  width: 100%;
+}
+
+.latest-posts-img img{
+  width:  100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.latest-must-read-content {
+  padding: 6px;
+}
+
+.latest-must-read-content .tag {
+  margin-bottom: 5px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.latest-must-read-content h3 {
+  font-size: 15px;
+}
+
+
+/* Must Read Side Section */
+
 
 .must-read-title {
   font-size: 18px;
@@ -890,6 +922,31 @@ footer {
 .fashion-card-title a {
   color: #000;
   transition: color 0.3s;
+}
+
+.details-social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.details-social-links {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  background: #e63946;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+}
+
+.details-social-links:hover {
+  background: #20c3cc;
 }
 
 .fashion-card-title a:hover {
@@ -1547,7 +1604,8 @@ footer {
 
 .related-article img {
   width: 100%;
-  height: 150px;
+height: 100%;
+max-height: 400px;
   object-fit: cover;
   margin-bottom: 10px;
 }
