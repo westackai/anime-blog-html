@@ -1,0 +1,177 @@
+@font-face {
+  font-family: "Oswald";
+  src: url("/assets/fonts/Oswald/static/Oswald-SemiBold.ttf") format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/assets/fonts/Montserrat/static/Montserrat-Bold.ttf")
+    format("truetype");
+  font-weight: normal;
+}
+
+body {
+  font-family: "Oswald", sans-serif;
+  background-color: #f8f8f8;
+  margin: 0;
+}
+
+.anime-container {
+  font-family: "Montserrat", sans-serif;
+
+  margin: 30px auto;
+  background: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+.coming-soon {
+  font-size: 14px;
+  color: gray;
+}
+
+.anime-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  width: 100%;
+  font-weight: bold;
+  border-bottom: 1px solid transparent; /* Hide lines */
+}
+
+.anime-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  width: 100%;
+  font-weight: bold;
+  border-bottom: 1px solid transparent; /* Hide lines */
+}
+
+.anime-container-first-img {
+  margin-bottom: 20px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.button-parent {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  margin-block: 40px;
+}
+
+.season-button {
+  background-color: red; /* Dark Red */
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 60px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  transition: background-color 0.3s ease;
+}
+
+.season-button:hover {
+  background-color: #6b290a; /* Slightly Darker Red */
+  color: #ff0000;
+}
+
+.anime-header {
+  height: 60px;
+  background: #0e0e0e;
+  color: red;
+  text-align: left;
+  font-weight: bold;
+}
+
+.anime-header-1 {
+  margin-top: 30px;
+  display: flex;
+  color: red;
+  align-items: center;
+  font-weight: bold;
+  border-bottom: 1px solid transparent;
+}
+
+.anime-header-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  background: #0e0e0e;
+  height: 60px;
+}
+
+.anime-row {
+  background: #fff;
+  text-align: center;
+  border: 1px solid black;
+  margin-block: 20px;
+}
+
+.anime-row img {
+  width: 101px;
+  height: auto;
+}
+
+.anime-row .serial {
+  font-weight: bold;
+}
+
+/* Countdown Styling */
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.count-box {
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  min-width: 60px;
+  font-weight: bold;
+  color: white;
+}
+
+.count-box span {
+  font-size: 20px;
+  display: block;
+  font-weight: bold;
+}
+
+.count-box p {
+  font-size: 12px;
+  margin: 5px 0 0;
+  color: #ddd;
+}
+
+#days,
+#hours,
+#minutes,
+#seconds {
+  color: black;
+  background-color: #ebebeb;
+  padding: 8px;
+  border-radius: 5px;
+}
