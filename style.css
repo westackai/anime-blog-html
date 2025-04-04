@@ -222,9 +222,7 @@ header {
 }
 
 @media (max-width: 500px) {
-  .main-nav {
-    display: none;
-  }
+  
 
   .header-main {
     display: none;
@@ -966,6 +964,9 @@ footer {
 
 .details-social-links:hover {
   background: #20c3cc;
+}
+.contents-ul-list{
+  padding-left: 20px;
 }
 
 .fashion-card-title a:hover {
@@ -2066,6 +2067,9 @@ footer {
   color: white;
   font-size: 14px;
 }
+.close-sidebar {
+  display: none;
+}
 
 /* Responsive adjustments */
 @media (max-width: 1200px) {
@@ -2164,7 +2168,7 @@ footer {
 /* Mobile sidebar styles */
 @media (max-width: 800px) {
   .main-nav {
-    width: fit-content;
+
     border: none;
     background-color: transparent;
   }
@@ -2173,8 +2177,7 @@ footer {
     flex-direction: column;
   }
 
-  .main-nav>.container>ul {
-    display: none;
+  .main-nav > .container > ul {
     flex-direction: column;
     position: fixed;
     top: 0;
@@ -2185,59 +2188,53 @@ footer {
     overflow-y: auto;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     transform: translateX(-100%);
-    transition: transform 0.3s ease;
+    opacity: 0;
+    transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
       url("/assets/img/nav-bg.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     padding: 60px 20px 20px;
-    /* Added padding for close button */
-  }
-
-  .main-nav>.container>ul li {
-    margin-bottom: 10px;
-    /* Better spacing */
-    pointer-events: none;
-    /* Disable clicks on li */
-  }
-
-  .main-nav>.container>ul li a {
-    color: white;
-    display: block;
-    /* Full width clickable area */
-    padding: 12px 0;
-    /* Better touch target */
-    pointer-events: auto;
-    /* Re-enable clicks only on anchors */
-    font-size: 18px;
-    /* Readable size */
-    text-transform: uppercase;
-    /* Match your style */
-  }
-
-  .main-nav>.container>ul.active {
-    transform: translateX(0);
     display: flex;
     text-align: left;
+    pointer-events: none; /* prevent clicks when hidden */
   }
 
-  /* Remove all dropdown-related styles */
+  .main-nav > .container > ul.active {
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .main-nav > .container > ul li {
+    margin-bottom: 10px;
+    pointer-events: none;
+  }
+
+  .main-nav > .container > ul li a {
+    color: white;
+    display: block;
+    padding: 12px 0;
+    pointer-events: auto;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+
   .main-nav .dropdown,
   .main-nav .has-dropdown.active .dropdown,
   .main-nav .dropdown .article {
     display: none !important;
   }
 
-  /* Remove dropdown indicators */
-  .main-nav>.container>ul li.has-dropdown>a::after {
+  .main-nav > .container > ul li.has-dropdown > a::after {
     display: none;
   }
 
   .mobile-menu-toggle {
     color: white;
     display: block;
-    padding: 15px 20px;
+    padding: 15px 5px;
     cursor: pointer;
     font-size: 24px;
   }
@@ -2247,7 +2244,24 @@ footer {
   }
 
   .close-sidebar {
-    display: block;
+    display: none; /* hidden by default */
+  }
+
+  .contents-ul-list{
+    padding-left: 0px;
+  }
+  .contents-ul-list:last-child{
+border-bottom: 1px solid #eee;
+  }
+  .list-item:last-child {
+    margin-bottom: 0px;
+ 
+
+  }
+
+  /* Show only when nav is open */
+  body.nav-open .close-sidebar {
+    display: none;
     position: fixed;
     top: 15px;
     right: 15px;
@@ -2256,8 +2270,16 @@ footer {
     cursor: pointer;
     z-index: 1001;
     color: white;
+    transition: opacity 0.3s ease;
+  }
+
+  .contents-list {
+    list-style: none;
+    padding: 5px 0;
+    display: block;
   }
 }
+
 
 @media (min-width: 801px) {
 

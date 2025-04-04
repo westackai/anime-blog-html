@@ -40,6 +40,35 @@
         </div>
 
         <nav class="main-nav">
+            <div class="categories-header">
+                <nav class="main-nav">
+                    <div class="container">
+                        <div class="mobile-menu-toggle">☰</div>
+                        <div class="close-sidebar">×</div>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li class="has-dropdown"><a href="#">Celebrity</a></li>
+                            <li class="has-dropdown"><a href="#">Entertainment</a></li>
+                            <li class="has-dropdown"><a href="#">Fashion</a></li>
+                            <li class="has-dropdown"><a href="#">Beauty</a></li>
+                            <li class="has-dropdown"><a href="/category">Style</a></li>
+                            <li class="has-dropdown"><a href="#">Hollywood</a></li>
+                            <li class="has-dropdown"><a href="#">Modelling</a></li>
+                            <li class="has-dropdown"><a href="#">Travel</a></li>
+                            <li class="has-dropdown"><a href="#">Music</a></li>
+                        </ul>
+                        <div class="main-nav-block2">
+                            <ul>
+                                <li><a href="#">COUNTDOWN</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+    
+                <div class="categories-title">
+                    <h1>GOSSIP</h1>
+                </div>
+            </div>
             <div class="container">
                 <ul>
                     <li><a href="/index.html">Home</a></li>
@@ -277,7 +306,7 @@
                                         <span class="item-title">Top 10 Isekai Anime with Action loving <br/> Heroes</span>
                                     </a>
                                 </li>
-                                <div style="padding-left: 20px;">
+                                <div class="contents-ul-list" >
                                 <li class="list-item">
                                     <a href="#1.1">
                                         <span class="item-number">1.1</span>
@@ -622,6 +651,90 @@
                 toggleIcon.classList.toggle('collapsed');
             });
         });
+    </script>
+     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const mobileToggle = document.querySelector(".mobile-menu-toggle");
+            const mainNavList = document.querySelector(".main-nav > .container > ul");
+            const closeBtn = document.querySelector(".close-sidebar");
+            const navLinks = document.querySelectorAll(".main-nav > .container > ul a");
+            const hasDropdowns = document.querySelectorAll(".has-dropdown");
+
+            // Open sidebar
+            mobileToggle?.addEventListener("click", function () {
+                mainNavList.classList.add("active");
+                document.body.classList.add("nav-open");
+                document.body.style.overflow = "hidden";
+            });
+
+            // Close sidebar
+            closeBtn?.addEventListener("click", function () {
+                mainNavList.classList.remove("active");
+                document.body.classList.remove("nav-open");
+                document.body.style.overflow = "auto";
+                closeBtn.style.display = "none"; // hide instantly when closing
+            });
+
+            // Show close button after transition
+            mainNavList.addEventListener("transitionend", function () {
+                if (mainNavList.classList.contains("active")) {
+                    closeBtn.style.display = "block";
+                }
+            });
+
+            // Dropdown handler
+            const handleDropdowns = () => {
+                if (window.innerWidth <= 800) {
+                    hasDropdowns.forEach((item) => {
+                        const link = item.querySelector("a");
+
+                        link?.addEventListener("click", function (e) {
+                            e.preventDefault();
+                            item.classList.toggle("active");
+                        });
+                    });
+                } else {
+                    hasDropdowns.forEach((item) => {
+                        item.classList.remove("active");
+                    });
+                }
+            };
+
+            // Run initially
+            handleDropdowns();
+
+            // Close sidebar on nav link click
+            navLinks.forEach((link) => {
+                link.addEventListener("click", function (e) {
+                    const currentUrl = window.location.pathname;
+                    const targetUrl = this.pathname;
+
+                    if (currentUrl === targetUrl && !link.closest(".has-dropdown")) {
+                        e.preventDefault();
+                        mainNavList.classList.remove("active");
+                        document.body.classList.remove("nav-open");
+                        document.body.style.overflow = "auto";
+                        closeBtn.style.display = "none";
+                    }
+                });
+            });
+
+            // Resize handler
+            let resizeTimeout;
+            window.addEventListener("resize", function () {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(() => {
+                    if (window.innerWidth > 800) {
+                        mainNavList.classList.remove("active");
+                        document.body.classList.remove("nav-open");
+                        document.body.style.overflow = "auto";
+                        closeBtn.style.display = "none";
+                    }
+                    handleDropdowns();
+                }, 100);
+            });
+        });
+
     </script>
 </body>
 </html>
