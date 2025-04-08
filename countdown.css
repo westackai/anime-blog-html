@@ -1,4 +1,4 @@
-@font-face {
+ /* @font-face {
   font-family: "Oswald";
   src: url("/assets/fonts/Oswald/static/Oswald-SemiBold.ttf") format("truetype");
   font-weight: bold;
@@ -8,19 +8,22 @@
   src: url("/assets/fonts/Montserrat/static/Montserrat-Bold.ttf")
     format("truetype");
   font-weight: normal;
-}
+} */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'); */
+ 
+/* @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'); */
 
 body {
-  font-family: "Oswald", sans-serif;
+  font-family: "Roboto", sans-serif;
   background-color: #f8f8f8;
   margin: 0;
 }
 
 .anime-container {
   font-family: "Montserrat", sans-serif;
-
   margin: 30px auto;
-  background: #f5f5f5;
+  background: #f0efef;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -33,7 +36,7 @@ h2 {
 
 .coming-soon {
   font-size: 14px;
-  color: gray;
+  color: rgb(45, 77, 236);
 }
 
 .anime-header {
@@ -97,8 +100,9 @@ h2 {
 
 .anime-header {
   height: 60px;
-  background: #0e0e0e;
-  color: red;
+  background: rgb(2,0,36);
+background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(172,40,28,0) 35%, rgba(2,58,70,1) 100%);
+  color: rgb(221, 231, 233);
   text-align: left;
   font-weight: bold;
 }
@@ -106,7 +110,7 @@ h2 {
 .anime-header-1 {
   margin-top: 30px;
   display: flex;
-  color: red;
+  color: rgb(221, 231, 233);
   align-items: center;
   font-weight: bold;
   border-bottom: 1px solid transparent;
@@ -128,7 +132,7 @@ h2 {
   margin-block: 20px;
 }
 .anime-row-img-sec {
-  padding-top: 10px;
+  padding-top: 3px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -138,6 +142,12 @@ h2 {
 .anime-row img {
   width: 101px;
   height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.anime-row img:hover {
+  transform: scale(1.1);
 }
 
 .anime-row .serial {
@@ -145,11 +155,28 @@ h2 {
 }
 
 /* Countdown Styling */
-.countdown {
+.countdown-main {
   display: flex;
   justify-content: center;
   gap: 10px;
   margin-top: 10px;
+  margin-right: 25px;
+}
+
+.countdown-2 {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  margin-right: 25px;
+}
+
+.countdown-3 {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  margin-right: 25px;
 }
 
 .count-box {
@@ -165,6 +192,12 @@ h2 {
   font-size: 20px;
   display: block;
   font-weight: bold;
+}
+
+.coming-soon-gif{
+  height: 90px;
+  width: 40px;
+  padding-left: 9px;
 }
 
 .count-box p {
@@ -188,6 +221,10 @@ h2 {
 }
 /* Media query for mobile screens */
 @media (max-width: 600px) {
+
+  .categories-title {
+    padding-right: 60px;
+  }
   
   .anime-container {
     font-family: "Montserrat", sans-serif;
@@ -205,11 +242,64 @@ h2 {
     text-align: center;
     margin-bottom: 5px;
   }
+
+  .img-1{
+    height: 250px;
+    width: 300px;
+    padding-right: 50px;
+  }
   
   .coming-soon {
     font-size: 12px;
-    color: gray;
+    color: rgb(30, 75, 241);
     text-align: center;
+  }
+
+  .coming-soon-gif{
+    padding-left: 9px;
+  }
+
+  .countdown-main {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    padding-right: 40px;
+  }
+
+  .countdown-2 {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    padding-left: 20px;
+  }
+
+  .countdown-3 {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+    padding-left: 20px;
+  }
+
+  .serial-1 {
+    padding-left: 30px;
+    font-size: 20px;
+  }
+
+  .serial-2 {
+    padding-left: 80px;
+    font-size: 20px;
+  }
+
+  .serial-3 {
+    padding-left: 70px;
+    font-size: 20px;
+  }
+
+  .grab {
+    padding-right: 60px;
   }
   
   .anime-header {
@@ -223,6 +313,7 @@ h2 {
     font-weight: bold;
     border-bottom: 1px solid transparent;
     text-align: center;
+    color: #0e0e0e;
   }
   
   .anime-row {
@@ -276,8 +367,6 @@ h2 {
     color: #ff0000;
   }
   
-  
-  
   .anime-header-div {
     display: flex;
     justify-content: center;
@@ -320,8 +409,7 @@ h2 {
     width: 100%;
     max-width: 1200px;
     margin: 20px auto;
-    background: #f5f5f5;
-
+    background-color: #f5f5f5;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
@@ -349,6 +437,7 @@ h2 {
     gap: 20px;
     align-items: center;
     text-align: center;
+    border:  rgb(217, 183, 233);
   }
   .anime-row-img-sec {
     padding-top: 10px;
@@ -356,10 +445,12 @@ h2 {
     flex-direction: column;
     align-items: center;
     gap: 50px;
+    margin-right: 110px;
+    padding-bottom: 20px;
   }
 
   .anime-row img {
-    width: 100%;
+    width: 60%;
     height: 100%;
   }
   .hide-in-mobile {
