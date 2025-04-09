@@ -32,7 +32,8 @@
                         <li class="has-dropdown"><a href="#">Hollywood</a></li>
                         <li class="has-dropdown"><a href="#">Modelling</a></li>
                         <li class="has-dropdown"><a href="#">Travel</a></li>
-                        <li class="has-dropdown"><a href="#">Music</a></li>
+                        <li class="has-dropdown"><a href="/quiz.html">Quiz</a></li>
+                        <li class="has-dropdown"><a href="/quiz.html">COUNTDOWN</a></li>
                     </ul>
                     <div class="main-nav-block2">
                         <ul>
@@ -921,36 +922,89 @@
 
     </footer>
     <script>
-        function countdownTimer(targetDate) {
-            function updateTimer() {
-                const now = new Date().getTime();
-                const distance = targetDate - now;
+        document.addEventListener("DOMContentLoaded", function () {
+            const mobileToggle = document.querySelector(".mobile-menu-toggle");
+            const mainNavList = document.querySelector(".main-nav > .container > ul");
+            const closeBtn = document.querySelector(".close-sidebar");
+            const navLinks = document.querySelectorAll(".main-nav > .container > ul a");
+            const hasDropdowns = document.querySelectorAll(".has-dropdown");
 
-                if (distance < 0) {
-                    document.querySelector(".countdown").innerHTML = "Released!";
-                    return;
+            // Open sidebar
+            mobileToggle?.addEventListener("click", function () {
+                mainNavList.classList.add("active");
+                document.body.classList.add("nav-open");
+                document.body.style.overflow = "hidden";
+            });
+
+            // Close sidebar
+            closeBtn?.addEventListener("click", function () {
+                mainNavList.classList.remove("active");
+                document.body.classList.remove("nav-open");
+                document.body.style.overflow = "auto";
+                closeBtn.style.display = "none"; // hide instantly when closing
+            });
+
+            // Show close button after transition
+            mainNavList.addEventListener("transitionend", function () {
+                if (mainNavList.classList.contains("active")) {
+                    closeBtn.style.display = "block";
                 }
+            });
 
-                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            // Dropdown handler
+            const handleDropdowns = () => {
+                if (window.innerWidth <= 800) {
+                    hasDropdowns.forEach((item) => {
+                        const link = item.querySelector("a");
 
-                document.getElementById("days").textContent = days;
-                document.getElementById("hours").textContent = hours;
-                document.getElementById("minutes").textContent = minutes;
-                document.getElementById("seconds").textContent = seconds;
-            }
+                        link?.addEventListener("click", function (e) {
+                            e.preventDefault();
+                            item.classList.toggle("active");
+                        });
+                    });
+                } else {
+                    hasDropdowns.forEach((item) => {
+                        item.classList.remove("active");
+                    });
+                }
+            };
 
-            updateTimer();
-            setInterval(updateTimer, 1000);
-        }
+            // Run initially
+            handleDropdowns();
 
-        // Set target release date
-        const releaseDate = new Date("July 1, 2025 00:00:00").getTime();
-        countdownTimer(releaseDate);
+            // Close sidebar on nav link click
+            navLinks.forEach((link) => {
+                link.addEventListener("click", function (e) {
+                    const currentUrl = window.location.pathname;
+                    const targetUrl = this.pathname;
+
+                    if (currentUrl === targetUrl && !link.closest(".has-dropdown")) {
+                        e.preventDefault();
+                        mainNavList.classList.remove("active");
+                        document.body.classList.remove("nav-open");
+                        document.body.style.overflow = "auto";
+                        closeBtn.style.display = "none";
+                    }
+                });
+            });
+
+            // Resize handler
+            let resizeTimeout;
+            window.addEventListener("resize", function () {
+                clearTimeout(resizeTimeout);
+                resizeTimeout = setTimeout(() => {
+                    if (window.innerWidth > 800) {
+                        mainNavList.classList.remove("active");
+                        document.body.classList.remove("nav-open");
+                        document.body.style.overflow = "auto";
+                        closeBtn.style.display = "none";
+                    }
+                    handleDropdowns();
+                }, 100);
+            });
+        });
+
     </script>
-
 </body>
 
 </html>
