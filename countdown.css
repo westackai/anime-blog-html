@@ -594,7 +594,7 @@ body {
 @media (min-width: 768px) {
   .movie-card {
     flex-direction: row;
-    height: 330px;
+    height: 300px;
   }
 
   .movie-poster {
@@ -618,9 +618,16 @@ body {
 }
 
 .countdown-item .day {
-  width: 40px;
+  width: 35px;
+  height: 35px;
 }
 
 .countdown-item .hours {
-  width: 40px;
+  width: 35px;
+  height: 35px;
+}
+
+.countdown-item .minute {
+  
+  height: 35px;
 }
