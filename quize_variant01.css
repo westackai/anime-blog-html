@@ -1,0 +1,131 @@
+.main-img {
+    height: 400px;
+    width: 900px;
+    object-fit: cover;
+}
+
+.ad-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+    font-weight: normal;
+}
+
+.main-img-heading {
+    font-size: 24px;
+    padding-top: 6px;
+    padding-bottom: 5px;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+
+.small-heading {
+    padding-top: 20px;
+    padding-left: 9px;
+    font-size: 13px;
+    color: gray;
+    font-weight: normal;
+}
+
+.card-1 {
+    height: 200px;
+    margin: 0;
+    padding: 0;
+    background-color: #6c4ed2; /* Purple background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+.card-1 h1 {
+    justify-items: center;
+    color: azure;
+    font-size: 50px;
+    font-weight: 900;
+    transition: transform 0.3s ease;
+}
+
+.card-1 h1:hover {
+    color: black;
+    transform: scale(1.2); /* Zoom in by 20% */
+}
+
+.card-2 {
+    height: 200px;
+    margin: 0;
+    padding: 0;
+    background-color: #06ed4b; /* Purple background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    cursor: pointer;
+    
+}
+
+.card-2 h1 {
+    justify-items: center;
+    color: azure;
+    font-size: 50px;
+    font-weight: 900;
+    transition: transform 0.3s ease;
+}
+
+.card-2 h1:hover {
+    color: black;
+    transform: scale(1.2); /* Zoom in by 20% */
+}
+
+.card-3 {
+    height: 200px;
+    margin: 0;
+    padding: 0;
+    background-color: #f10ae9; /* Purple background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+
+.card-3 h1 {
+    justify-items: center;
+    color: azure;
+    font-size: 50px;
+    font-weight: 900;
+    transition: transform 0.3s ease;
+}
+
+.card-3 h1:hover {
+    color: black;
+    transform: scale(1.2); /* Zoom in by 20% */
+}
+
+.card-4 {
+    height: 200px;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f00c; /* Purple background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+.card-4 h1 {
+    justify-items: center;
+    color: azure;
+    font-size: 50px;
+    font-weight: 900;
+    transition: transform 0.3s ease;
+}
+
+.card-4 h1:hover {
+    color: black;
+    transform: scale(1.2); /* Zoom in by 20% */
+}
