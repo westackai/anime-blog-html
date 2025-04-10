@@ -48,6 +48,12 @@ a {
   margin-right: 4px;
 }
 
+.view-btn-container{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
 .views {
   color: red;
   font-size: 13px;
@@ -83,6 +89,18 @@ h1 {
   font-size: 16px;
   margin-bottom: 20px;
 }
+/* Selected quiz card */
+.card.selected {
+  border: 2px solid #5246F5;
+  box-shadow: 0 0 10px rgba(82, 70, 245, 0.6);
+  opacity: 1;
+}
+
+.card.faded {
+  opacity: 0.4;
+  pointer-events: none;
+}
+
 
 .author {
   display: flex;
@@ -213,6 +231,7 @@ padding-inline: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   background-color: #fff;
   transition: transform 0.2s ease;
+  cursor: pointer;
 }
 
 .card:hover {
