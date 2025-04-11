@@ -1,0 +1,99 @@
+.contributor-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    background: #fff;
+    padding: 16px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    max-width: 800px;
+  }
+
+  .contributor {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1 1 300px;
+  }
+
+  .contributor img.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    bottom: 80px;
+  }
+
+  .contributor-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .contributor-info a {
+    color: #0056cc;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #ff0080, #7928ca);
+    color: white;
+    font-size: 14px;
+    display: inline-block;
+    margin-top: 4px;
+  }
+
+  .approved {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1 1 300px;
+  }
+
+
+  .approved-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #ffeb00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .approved-icon img {
+    width: 26px;
+    height: 26px;
+  }
+
+  .approved-text {
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .approved-text a {
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  .left-box {
+    height: 170px;
+  }
+
+  .quiz-heading {
+    align-items: center;
+  }
+
+  @media (max-width: 600px) {
+    .contributor-wrapper {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
