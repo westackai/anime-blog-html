@@ -219,7 +219,6 @@ padding-inline: 10px;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
   gap: 40px;
-  padding: 10px;
   padding-top: 24px;
   margin-bottom: 70px;
 }
