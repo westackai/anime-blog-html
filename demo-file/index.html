@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="grid">
+        <div class="quiz-card">
+          <input type="checkbox" class="quiz-checkbox" />
+          <div class="card-content">
+            <h3>Option 1</h3>
+          </div>
+        </div>
+        <div class="quiz-card">
+          <input type="checkbox" class="quiz-checkbox" />
+          <div class="card-content">
+            <h3>Option 2</h3>
+          </div>
+        </div>
+        <div class="quiz-card">
+          <input type="checkbox" class="quiz-checkbox" />
+          <div class="card-content">
+            <h3>Option 3</h3>
+          </div>
+        </div>
+      </div>
+      
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const quizGrids = document.querySelectorAll(".grid");
+      
+          quizGrids.forEach((grid) => {
+            const cards = grid.querySelectorAll(".quiz-card");
+      
+            cards.forEach((card) => {
+              const checkbox = card.querySelector(".quiz-checkbox");
+      
+              function toggleCardSelection() {
+                const isSelected = card.classList.contains("selected");
+      
+                if (isSelected) {
+                  card.classList.remove("selected", "faded");
+                  checkbox.checked = false;
+                } else {
+                  card.classList.add("selected");
+                  checkbox.checked = true;
+                  card.classList.remove("faded");
+                }
+              }
+      
+              // Click on card (not checkbox)
+              card.addEventListener("click", (e) => {
+                if (e.target.classList.contains("quiz-checkbox")) return;
+                toggleCardSelection();
+              });
+      
+              // Click on checkbox
+              checkbox.addEventListener("click", (e) => {
+                e.stopPropagation();
+                toggleCardSelection();
+              });
+            });
+          });
+        });
+      </script>
+      
+</body>
+</html>

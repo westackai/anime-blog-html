@@ -4,38 +4,57 @@
     grid-template-rows: 1fr;
     gap: 20px;
     padding: 10px;
-    padding-top: 24px;
+    padding-top: 20px;
     margin-bottom: 70px;
     padding-left: 50px;
 }
 
-
-.card img {
+.quiz-card img {
     width: 100%;
     height: auto;
     display: block;
+  
   }
 
-  .top-left-box {
+  .quiz-card {
+    border: 2px solid #ccc;
+    padding: 1rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+  }
+  
+  .quiz-card.selected {
+    border-color: #00bcd4;
+    background-color: rgb(61, 61, 247);
+  }
+
+  .quiz-card.faded {
+    opacity: 1;
+  }
+
+  .quiz-checkbox {
+    width: 22px;
+    height: 22px;
     position: absolute;
-    top: 8px;
-    left: 8px;
-    width: 25px;
-    height: 25px;
-    border: 2px solid white;
-    background-color: transparent;
-    border-radius: 4px;
+    top: 0%;
+    margin-top: 30px;
+    left: 25px;
   }
 
   /* Responsive tweaks */
   @media (max-width: 480px) {
-    .top-left-box {
+    /* .top-left-box {
       width: 18px;
       height: 18px;
-    }
+    } */
   }
 
-.card {
+.quiz-card {
     width: 100%;
     max-width: 350px;
     border-radius: 8px;
@@ -47,7 +66,7 @@
     position: relative;
   }
 
-  .card:hover {
+  .quiz-card:hover {
     transform: scale(1.02);
   }
 
@@ -66,9 +85,9 @@
   .custom-checkbox {
     width: 20px;
     height: 20px;
-    background-color: white;
+    background-color: transparent;
     border-radius: 4px;
-    position: relative;
+    position: absolute;
     cursor: pointer;
   }
 
@@ -85,7 +104,7 @@
     display: block;
   }
 
-  .card img {
+  .quiz-card img {
     width: 100%;
     height: auto;
     display: block;
@@ -130,7 +149,7 @@
         width: 100%;
       }
 
-    .card {
+    .quiz-card {
       max-width: 90%;
     }
   }
