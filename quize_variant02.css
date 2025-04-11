@@ -46,6 +46,16 @@
     left: 25px;
   }
 
+  .card-link {
+    color: #333; /* Default link color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .quiz-card.selected .card-link {
+    color: #f5f8f9; /* Link color when card is selected */
+  }
+
   /* Responsive tweaks */
   @media (max-width: 480px) {
     /* .top-left-box {
