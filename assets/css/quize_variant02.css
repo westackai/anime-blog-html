@@ -1,0 +1,176 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  gap: 20px;
+  padding: 10px;
+  padding-top: 20px;
+  margin-bottom: 70px;
+  padding-left: 50px;
+}
+
+.quiz-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+
+}
+
+.quiz-card {
+  border: 2px solid #ccc;
+  padding: 1rem;
+  margin: 0.5rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+.quiz-card.selected {
+  border-color: #00bcd4;
+  background-color: rgb(61, 61, 247);
+}
+
+.quiz-card.faded {
+  opacity: 1;
+}
+
+.quiz-checkbox {
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  top: 0%;
+  margin-top: 30px;
+  left: 25px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  /* .top-left-box {
+    width: 18px;
+    height: 18px;
+  } */
+}
+
+.quiz-card {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 8px;
+  overflow: hidden;
+  color: #fff;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.quiz-card:hover {
+  transform: scale(1.02);
+}
+
+.checkbox-container {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 10;
+}
+
+.checkbox-container input[type="checkbox"] {
+  display: none;
+}
+
+
+.custom-checkbox {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  border-radius: 4px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.custom-checkbox::after {
+  content: '✔';
+  position: absolute;
+  top: -2px;
+  left: 4px;
+  font-size: 16px;
+  display: none;
+}
+
+.checkbox-container input:checked + .custom-checkbox::after {
+  display: block;
+}
+
+.quiz-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card-content {
+  padding: 12px;
+  text-align: center;
+}
+
+.card-content h3 {
+  margin: 10px 0 5px;
+  font-size: 18px;
+  color: #000;
+}
+
+.card-content a {
+  color: #fff;
+  font-style: italic;
+  text-decoration: none;
+  font-size: 14px;
+  word-wrap: break-word;
+}
+
+.card-content a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+
+  .grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: 1fr;
+      gap: 10px;
+      padding: 10px;
+      padding-top: 24px;
+      margin-bottom: 70px;
+      align-items: center;
+      justify-items: center;
+      width: 100%;
+    }
+
+  .quiz-card {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-content h3 {
+    font-size: 16px;
+  }
+
+  .card-content a {
+    font-size: 13px;
+  }
+
+  .custom-checkbox {
+    width: 18px;
+    height: 18px;
+  }
+
+  .custom-checkbox::after {
+    font-size: 14px;
+    top: -1px;
+    left: 4px;
+  }
+}

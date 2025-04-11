@@ -1484,6 +1484,9 @@ footer {
   }
   .right-sidebar > img {
     margin: 30px auto;
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
   }
 }
 

@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anime Timeline</title>
-    <link rel="stylesheet" href="/quiz.css">
+    <link rel="stylesheet" href="/assets/css/quiz.css">
     <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="quize_variant01.css">
+    <link rel="stylesheet" href="/assets/css/quize_variant02.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
@@ -560,115 +560,327 @@
                     </div>
           
           
-                    <!-- AD IMAGE SECTION -->
+                    <!-- Ad IMAGE SECTION -->
           
                     <div class="left-card">
-                        <p class="ad-text">Advertisement</p>
                       <img class="ad-img" src="data:image/jpeg;base64,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" alt="BuzzFeed Quiz Party" />
                     </div>
           
-                   <!-- MAIN IMAGE SECTION -->
-                    <div >
-                        <h3 class="main-img-heading">Kołaczki Cookies (Poland)</h3>
-                        <img class="main-img" src="https://img.buzzfeed.com/store-an-image-prod-us-east-1/4uJvf7ZWW.png?downsize=625%3A*&output-format=auto&output-quality=auto" alt="" srcset="">
+                    <!-- QUESTION TAG -->
+                    <div class="left-box">
+                     <span class="quiz-heading" style=" font-weight: 800;">Check off all the 2023 <br /> memes you know:</span> 
                     </div>
           
                     <!-- OPTIONS -->
-                    <h6 class="small-heading"><i>Getty Images</i></h6>
-                    <div class="grid">
-                        <!-- Card 1 -->
-                        <div class="card-1">
-                            <h1>Yay</h1>
+                    <div class="grid ">
+                      <!-- Card 1 --> 
+                      <div class="quiz-card">
+                        <input type="checkbox" class="quiz-checkbox" />
+                        <div>
+                             <div class="top-left-box"></div>
+                             <img class="img#" style="padding-bottom: 20px;" src="https://img.buzzfeed.com/store-an-image-prod-us-east-1/xPrx4hKUr.png?crop=813%3A581%3B0%2C130&downsize=320%3A*&output-format=auto&output-quality=auto" alt="Original">
+                             <div class="card-content" >
+                              <h3 >"Bhupendra Jogi" meme</h3>
+                                 <a style="color: gray;" href="">https://www.instagram.com/p/CzI3HN8yvTK/</a>
+                             </div>
                         </div>
-                    
-                        <!-- Card 2 -->
-                        <div class="card-1">
-                            <h1>Nay</h1>
+                       </div>
+                  
+                      <!-- Card 2 -->
+                      <div class="quiz-card">
+                        <input type="checkbox" class="quiz-checkbox" />
+                        <div>
+                            <div class="top-left-box"></div>
+                            <img src="https://img.buzzfeed.com/store-an-image-prod-us-east-1/3TbWEUPIf.png?crop=653%3A466%3B0%2C129&downsize=320%3A*&output-format=auto&output-quality=auto" alt="Original">
+                            <div class="card-content">
+                              <h3>"So beautiful, so elegant, just looking like a wow!" meme</h3>
+                                <a style="color: gray;" href="">https://www.instagram.com/p/CzI3HN8yvTK/</a>
+                            </div>
                         </div>
-                    </div>     
+                      </div>
+                  
+                      <!-- Card 3 -->
 
-                     <!-- AD IMAGE SECTION -->
-          
-                     <div class="left-card">
-                        <p class="ad-text">Advertisement</p>
-                        <img class="ad-img" src="data:image/jpeg;base64,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" alt="BuzzFeed Quiz Party" />
-                      </div>
-            
-                     <!-- MAIN IMAGE SECTION -->
-                      <div>
-                        <h3 class="main-img-heading">Feast of the Seven Fishes (Italy)</h3>
-                          <img class="main-img" src="https://img.buzzfeed.com/store-an-image-prod-us-east-1/FBDmPRrXc.png?downsize=625%3A*&output-format=auto&output-quality=auto" alt="" srcset="">
-                      </div>
-            
-                    <!-- OPTIONS -->
-                    <h6 class="small-heading"><i>Getty Images</i></h6>
-                    <div class="grid">
-                        <!-- Card 1 -->
-                        <div class="card-2">
-                            <h1 cl>Yay</h1>
-                        </div>
                     
-                        <!-- Card 2 -->
-                        <div class="card-2">
-                            <h1>Nay</h1>
-                        </div>
-                    </div>     
 
-                       <!-- AD IMAGE SECTION -->
-          
-                    <div class="left-card">
-                        <p class="ad-text">Advertisement</p>
-                        <img class="ad-img" src="data:image/jpeg;base64,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" alt="BuzzFeed Quiz Party" />
+                       <div class="quiz-card">
+                        <input type="checkbox" class="quiz-checkbox" />
+                        <div>
+                            <div class="top-left-box"></div>
+                            <img src="https://img.buzzfeed.com/store-an-image-prod-us-east-1/jGgWHL5Wb.png?crop=785%3A560%3B0%2C83&downsize=320%3A*&output-format=auto&output-quality=auto" alt="Original">
+                            <div class="card-content">
+                              <h3>"Moye Moye" meme</h3>
+                                <a style="color: gray;" href="">https://www.instagram.com/p/CzI3HN8yvTK/</a>
+                            </div>
+                        </div>
                       </div>
-            
-                     <!-- MAIN IMAGE SECTION -->
-                      <div>
-                        <h3 class="main-img-heading">Stollen (Germany)</h3>
-                          <img class="main-img" src="https://images.unsplash.com/photo-1481391243133-f96216dcb5d2?ixid=M3w3MzE3NHwwfDF8c2VhcmNofDF8fFN0b2xsZW58ZW58MHx8fHwxNzAyNTI5MDU1fDA&ixlib=rb-4.0.3&fit=crop&h=781&w=625&crop=edges&fit=crop&max-w=600&crop=edges" alt="" srcset="">
-                      </div>
-            
-                        <!-- OPTIONS -->
-                    <h6 class="small-heading"><i>Getty Images</i></h6>
 
-                    <div class="grid">
-                        <!-- Card 1 -->
-                        <div class="card-3">
-                            <h1 cl>Yay</h1>
+        
+                      <!-- Card 4 -->
+                      <div class="quiz-card">
+                        <input type="checkbox" class="quiz-checkbox" />
+                        <div>
+                            <div class="top-left-box"></div>
+                            <img src="https://img.buzzfeed.com/store-an-image-prod-us-east-1/5PwQMeRlO.png?crop=766%3A547%3B0%2C63&downsize=320%3A*&output-format=auto&output-quality=auto" alt="Original">
+                            <div class="card-content">
+                              <h3>"Aayein?" meme</h3>
+                              <div>
+                                <a style="color: gray;"  href="">https://www.instagram.com/p/CzI3HN8yvTKdededdc/</a>
+                              </div>
+                            </div>
                         </div>
-                    
-                        <!-- Card 2 -->
-                        <div class="card-3">
-                            <h1>Nay</h1>
+                      </div>
+
+                      <div class="quiz-card">
+                        <input type="checkbox" class="quiz-checkbox" />
+                        <div>
+                            <div class="top-left-box"></div>
+                            <img class="img#" style="padding-bottom: 20px;" src="https://img.buzzfeed.com/store-an-image-prod-us-east-1/OSmvYi9KR.png?crop=698%3A498%3B0%2C50&downsize=320%3A*&output-format=auto&output-quality=auto" alt="Original">
+                            <div class="card-content">
+                              <h3>"She Don't Know" meme</h3>
+                              <div class="link">
+                                <a style="color: gray;" href="">https://www.instagram.com/p/CzI3HN8yvTKdededdc/</a>
+                              </div>
+                            </div>
                         </div>
-                    </div> 
-                    
-                       <!-- AD IMAGE SECTION -->
+                      </div>
+
+                      <div class="quiz-card">
+                        <input type="checkbox" class="quiz-checkbox" />
+                        <div>
+                            <div class="top-left-box"></div>
+                            <img src="https://img.buzzfeed.com/store-an-image-prod-us-east-1/TVBrb0cki.png?crop=705%3A503%3B0%2C27&downsize=320%3A*&output-format=auto&output-quality=auto" alt="Original">
+                            <div class="card-content">
+                              <h3>"Elvish bhai ke aage koi kuch bol sakta hai kya" meme</h3>
+                              <div class="link">
+                                <a style="color: gray;" href="">https://www.instagram.com/p/CzI3HN8yvTKdededdc/</a>
+                              </div>
+                            </div>
+                        </div>
+                      </div>
+
+                      <div class="quiz-card">
+                        <input type="checkbox" class="quiz-checkbox" />
+                        <div>
+                            <div class="top-left-box"></div>
+                            <img src="https://img.buzzfeed.com/store-an-image-prod-us-east-1/Pzjjno8m0.png?crop=704%3A503%3B0%2C0&downsize=320%3A*&output-format=auto&output-quality=auto" alt="Original">
+                            <div class="card-content">
+                              <h3>"Maa ki aankhon mein dekh" meme</h3>
+                              <div class="link">
+                                <a style="color: gray;" href="">https://www.instagram.com/p/CzI3HN8yvTKdededdc/</a>
+                              </div>
+                            </div>
+                        </div>
+                      </div>
+
+                      <div class="quiz-card">
+                        <input type="checkbox" class="quiz-checkbox" />
+                        <div>
+                            <div class="top-left-box"></div>
+                            <img src="https://img.buzzfeed.com/store-an-image-prod-us-east-1/Zw8_7K8A8.png?crop=778%3A556%3B0%2C55&downsize=320%3A*&output-format=auto&output-quality=auto" alt="Original">
+                            <div class="card-content">
+                              <h3>"Rakhi Sawant" meme</h3>
+                              <div class="link">
+                                <a style="color: gray;" href="">https://www.instagram.com/p/CzI3HN8yvTKdededdc/</a>
+                              </div>
+                            </div>
+                        </div>
+                      </div>
+
+                      <div class="quiz-card">
+                        <input type="checkbox" class="quiz-checkbox" />
+                        <div>
+                            <div class="top-left-box"></div>
+                            <img class="img#" style="padding-bottom: 20px;" src="https://img.buzzfeed.com/store-an-image-prod-us-east-1/kxHsSu1eR.png?crop=718%3A513%3B0%2C0&downsize=320%3A*&output-format=auto&output-quality=auto" alt="Original">
+                            <div class="card-content">
+                              <h3>"Badal Barsa Bijuli" meme</h3>
+                              <div class="link">
+                                <a style="color: gray;" href="">https://www.instagram.com/p/CzI3HN8yvTKdededdc/</a>
+                              </div>
+                            </div>
+                        </div>
+                      </div>
+
+                      <div class="quiz-card">
+                        <input type="checkbox" class="quiz-checkbox" />
+                        <div>
+                            <div class="top-left-box"></div>
+                        <img src="https://img.buzzfeed.com/store-an-image-prod-us-east-1/Hh1YHycsS.png?crop=736%3A526%3B0%2C63&downsize=320%3A*&output-format=auto&output-quality=auto" alt="Original">
+                        <div class="card-content">
+                          <h3>"Hum 24 saal tak cycle nahi khareed paaye" meme</h3>
+                          <div class="link">
+                            <a style="color: gray;" href="">https://www.instagram.com/p/CzI3HN8yvTKdededdc/</a>
+                          </div>
+                        </div>
+                        </div>
+                      </div>
+
+                      <div class="quiz-card">
+                        <input type="checkbox" class="quiz-checkbox" />
+                       <div>
+                        <div class="top-left-box"></div>
+                        <img src="https://img.buzzfeed.com/store-an-image-prod-us-east-1/YIt0aBnUd.png?crop=730%3A521%3B0%2C0&downsize=320%3A*&output-format=auto&output-quality=auto" alt="Original">
+                        <div class="card-content">
+                          <h3>"Singing Modi / Melodi" meme</h3>
+                          <div class="link">
+                            <a style="color: gray;" href="">https://www.instagram.com/p/CzI3HN8yvTKdededdc/</a>
+                          </div>
+                        </div>
+                       </div>
+                      </div>
+
+                      <div class="quiz-card">
+                        <input type="checkbox" class="quiz-checkbox" />
+                        <div>
+                            <div class="top-left-box"></div>
+                        <img src="https://img.buzzfeed.com/store-an-image-prod-us-east-1/Umr0Hc19R.png?crop=549%3A392%3B0%2C4&downsize=320%3A*&output-format=auto&output-quality=auto" alt="Original">
+                        <div class="card-content">
+                          <h3>"Desi uncle dancing" meme</h3>
+                          <div class="link">
+                            <a style="color: gray;" href="">https://www.instagram.com/p/CzI3HN8yvTKdededdc/</a>
+                          </div>
+                        </div>
+                        </div>
+                      </div>
+
+                      <div class="quiz-card">
+                        <input type="checkbox" class="quiz-checkbox" />
+                       <div>
+                        <div class="top-left-box"></div>
+                        <img src="https://img.buzzfeed.com/store-an-image-prod-us-east-1/AG2p4D7e0.png?crop=606%3A433%3B0%2C0&downsize=320%3A*&output-format=auto&output-quality=auto" alt="Original">
+                        <div class="card-content">
+                          <h3>"Glacier ko pighal jaane dijiye" meme</h3>
+                          <div class="link">
+                            <a style="color: gray;" href="">https://www.instagram.com/p/CzI3HN8yvTKdededdc/</a>
+                          </div>
+                        </div>
+                       </div>
+                      </div>
+
+                      <div class="quiz-card">
+                        <input type="checkbox" class="quiz-checkbox" />
+                       <div>
+                        <div class="top-left-box"></div>
+                        <img src="https://img.buzzfeed.com/store-an-image-prod-us-east-1/uXRM1PhR-.png?crop=646%3A461%3B0%2C118&downsize=320%3A*&output-format=auto&output-quality=auto" alt="Original">
+                        <div class="card-content">
+                          <h3>"Shit!" meme</h3>
+                          <div class="link">
+                            <a style="color: gray;" href="">https://www.instagram.com/p/CzI3HN8yvTKdededdc/</a>
+                          </div>
+                        </div>
+                       </div>
+                      </div>
+
+                      <div class="quiz-card">
+                        <input type="checkbox" class="quiz-checkbox" />
+                       <div>
+                        <div class="top-left-box"></div>
+                        <img src="https://img.buzzfeed.com/store-an-image-prod-us-east-1/XgUEGConx.png?crop=334%3A239%3B0%2C18&downsize=320%3A*&output-format=auto&output-quality=auto" alt="Original">
+                        <div class="card-content">
+                          <h3>"Aukaat dikha di" meme </h3>
+                          <div class="link">
+                            <a style="color: gray;" href="">https://www.instagram.com/p/CzI3HN8yvTKdededdc/</a>
+                          </div>
+                        </div>
+                       </div>
+                      </div>
+
+                      <div class="quiz-card">
+                        <input type="checkbox" class="quiz-checkbox" />
+                       <div>
+                        <div class="top-left-box"></div>
+                        <img src="https://img.buzzfeed.com/store-an-image-prod-us-east-1/Z4XPnS9pb.png?crop=824%3A589%3B0%2C0&downsize=320%3A*&output-format=auto&output-quality=auto" alt="Original">
+                        <div class="card-content">
+                          <h3>"Khatti toffee" meme</h3>
+                          <div class="link">
+                            <a style="color: gray;" href="">https://www.instagram.com/p/CzI3HN8yvTKdededdc/</a>
+                          </div>
+                        </div>
+                       </div>
+                      </div>
+
+                      <div class="quiz-card">
+                        <input type="checkbox" class="quiz-checkbox" />
+                       <div>
+                        <div class="top-left-box"></div>
+                        <img src="https://img.buzzfeed.com/store-an-image-prod-us-east-1/xeHkhb7tT.png?crop=464%3A332%3B56%2C0&downsize=320%3A*&output-format=auto&output-quality=auto" alt="Original">
+                        <div class="card-content">
+                          <h3>"La la la la / Gopi Bahu" meme</h3>
+                          <div class="link">
+                            <a style="color: gray;" href="">https://www.instagram.com/p/CzI3HN8yvTKdededdc/</a>
+                          </div>
+                        </div>
+                       </div>
+                      </div>
+
+                      <div class="quiz-card">
+                        <input type="checkbox" class="quiz-checkbox" />
+                       <div>
+                        <div class="top-left-box"></div>
+                        <img src="https://img.buzzfeed.com/store-an-image-prod-us-east-1/xJi3A759e.png?crop=453%3A324%3B42%2C0&downsize=320%3A*&output-format=auto&output-quality=auto" alt="Original">
+                        <div class="card-content">
+                          <h3>"Lappu sa Sachin" meme</h3>
+                          <div class="link">
+                            <a style="color: gray;" href="">https://www.instagram.com/p/CzI3HN8yvTKdededdc/</a>
+                          </div>
+                        </div>
+                       </div>
+                      </div>
+
+                      <div class="quiz-card">
+                        <input type="checkbox" class="quiz-checkbox" />
+                       <div>
+                        <div class="top-left-box"></div>
+                        <img src="https://img.buzzfeed.com/store-an-image-prod-us-east-1/PzWgi2aO1.png?crop=452%3A323%3B0%2C0&downsize=320%3A*&output-format=auto&output-quality=auto" alt="Original">
+                        <div class="card-content">
+                          <h3>"Orry / I am a liver" meme</h3>
+                          <div class="link">
+                            <a style="color: gray;" href="">https://www.instagram.com/p/CzI3HN8yvTKdededdc/</a>
+                          </div>
+                        </div>
+                       </div>
+                      </div>
+
+                      <div class="quiz-card">
+                        <input type="checkbox" class="quiz-checkbox" />
+                       <div>
+                        <div class="top-left-box"></div>
+                        <img src="https://img.buzzfeed.com/store-an-image-prod-us-east-1/l69UwP_UY.png?crop=808%3A577%3B0%2C0&downsize=320%3A*&output-format=auto&output-quality=auto" alt="Original">
+                        <div class="card-content">
+                          <h3>"Rashmika Mandanna / Animal" meme</h3>
+                          <div class="link">
+                            <a style="color: gray;" href="">https://www.instagram.com/p/CzI3HN8yvTKdededdc/</a>
+                          </div>
+                        </div>
+                       </div>
+                      </div>
+
+                      <div class="quiz-card">
+                        <input type="checkbox" class="quiz-checkbox" />
+                        <div>
+                            <div class="top-left-box"></div>
+                            <img src="https://img.buzzfeed.com/store-an-image-prod-us-east-1/XgUEGConx.png?crop=334%3A239%3B0%2C18&downsize=320%3A*&output-format=auto&output-quality=auto" alt="Original">
+                            <div class="card-content">
+                              <h3>"Chips maang raha hai" meme/h3>
+                              <div class="link">
+                                <a style="color: gray;" href="">https://www.instagram.com/p/CzI3HN8yvTKdededdc/</a>
+                              </div>
+                            </div>
+                        </div>
+                      </div>
+
+                    </div>
           
-                       <div class="left-card">
-                        <p class="ad-text">Advertisement</p>
-                        <img class="ad-img" src="data:image/jpeg;base64,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" alt="BuzzFeed Quiz Party" />
-                      </div>
+                   
+          
+          
+                
+                </div>
+          
             
-                     <!-- MAIN IMAGE SECTION -->
-                      <div>
-                        <h3 class="main-img-heading">Christmas Pudding (England)</h3>
-                          <img class="main-img" src="https://img.buzzfeed.com/store-an-image-prod-us-east-1/cFu2WQXuQ.png?downsize=625%3A*&output-format=auto&output-quality=auto" alt="" srcset="">
-                      </div>
-            
-                        <!-- OPTIONS -->
-                        <h6 class="small-heading"><i>Getty Images</i></h6>
-                    <div class="grid">
-                        <!-- Card 1 -->
-                        <div class="card-4">
-                            <h1 cl>Yay</h1>
-                        </div>
-                    
-                        <!-- Card 2 -->
-                        <div class="card-4">
-                            <h1>Nay</h1>
-                        </div>
-                    </div>      
-                </div> 
+                
+                
+                
                 </div>
 
              <!-- Right Sidebar -->
@@ -682,10 +894,6 @@
 
     </main>
       
- 
-
-    
-
     <!-- Footer Section -->
 
     <footer>
@@ -811,6 +1019,51 @@
         </div>
 
     </footer>
+
+    <!-- CARD SELECTE FUNCTIONALITY -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const quizGrids = document.querySelectorAll(".grid");
+      
+          quizGrids.forEach((grid) => {
+            const cards = grid.querySelectorAll(".quiz-card");
+      
+            cards.forEach((card) => {
+              const checkbox = card.querySelector(".quiz-checkbox");
+      
+              function toggleCardSelection() {
+                const isSelected = card.classList.contains("selected");
+      
+                if (isSelected) {
+                  card.classList.remove("selected", "faded");
+                  checkbox.checked = false;
+                } else {
+                  card.classList.add("selected");
+                  checkbox.checked = true;
+                  card.classList.remove("faded");
+                }
+              }
+      
+              // Click on card (not checkbox)
+              card.addEventListener("click", (e) => {
+                if (e.target.classList.contains("quiz-checkbox")) return;
+                toggleCardSelection();
+              });
+      
+              // Click on checkbox
+              checkbox.addEventListener("click", (e) => {
+                e.stopPropagation();
+                toggleCardSelection();
+              });
+            });
+          });
+        });
+    </script>
+      
+
+    <!-- FULL WEBSITE FUNCTIONALITY -->
+
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const mobileToggle = document.querySelector(".mobile-menu-toggle");
