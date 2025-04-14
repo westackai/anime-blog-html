@@ -1081,78 +1081,52 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const quizGrids = document.querySelectorAll(".grid");
-
-            quizGrids.forEach((grid) => {
-                const cards = grid.querySelectorAll(".quiz-card");
-
-                cards.forEach((card) => {
-                    const checkbox = card.querySelector(".quiz-checkbox");
-
-                    function toggleCardSelection() {
-                        const isSelected = card.classList.contains("selected");
-
-                        if (isSelected) {
-                            card.classList.remove("selected", "faded");
-                            checkbox.checked = false;
-                        } else {
-                            card.classList.add("selected");
-                            checkbox.checked = true;
-                            card.classList.remove("faded");
-                        }
-                    }
-
-                    // Click on card (not checkbox)
-                    card.addEventListener("click", (e) => {
-                        if (e.target.classList.contains("quiz-checkbox")) return;
-                        toggleCardSelection();
-                    });
-
-                    // Click on checkbox
-                    checkbox.addEventListener("click", (e) => {
-                        e.stopPropagation();
-                        toggleCardSelection();
-                    });
+          const quizGrids = document.querySelectorAll(".grid");
+          const viewBtn = document.querySelector(".view-btn");
+          const resultSection = document.getElementById("quiz-result");
+      
+          viewBtn.addEventListener("click", function () {
+            const allAnswered = Array.from(quizGrids).every(grid =>
+              grid.querySelector(".quiz-card.selected")
+            );
+      
+            if (!allAnswered) {
+              alert("Please answer all quiz questions before viewing the result.");
+              return;
+            }
+      
+            resultSection.style.display = "block";
+      
+            document.querySelector(".result-title").innerText = "Burger";
+            document.querySelector(".result-description").innerText =
+              "You’re burgers. We’re talkin’ McDonald’s, Burger King, Wendy’s, every burger place...";
+            document.querySelector(".result-img").src =
+              "https://i.giphy.com/KGjsxf6oFafgj5UWsb.webp";
+          });
+      
+          // ✅ Fix: make faded cards still clickable and re-selectable
+          quizGrids.forEach((grid) => {
+            const cards = grid.querySelectorAll(".quiz-card");
+      
+            cards.forEach((card) => {
+              card.addEventListener("click", () => {
+                // Always allow changing the selection
+                cards.forEach(c => {
+                  c.classList.remove("selected", "faded");
                 });
+      
+                // Select the clicked one
+                card.classList.add("selected");
+      
+                // Fade others
+                cards.forEach(c => {
+                  if (c !== card) c.classList.add("faded");
+                });
+              });
             });
+          });
         });
-        document.getElementById('submit-btn').addEventListener('click', function () {
-            const checkboxes = document.querySelectorAll('.quiz-checkbox');
-            let correctCount = 0;
-            let totalCorrect = 0;
-            let selectedIncorrect = 0;
-
-            checkboxes.forEach(cb => {
-                const isCorrect = cb.dataset.correct === "true";
-                if (isCorrect) totalCorrect++;
-                if (cb.checked && isCorrect) correctCount++;
-                if (cb.checked && !isCorrect) selectedIncorrect++;
-            });
-
-            // Show loading state
-            const resultContainer = document.getElementById('result-container');
-            const resultMessage = document.getElementById('result-message');
-            resultMessage.textContent = "Calculating your result...";
-            resultContainer.style.display = 'block';
-
-            // Fake loading delay (2 seconds)
-            setTimeout(() => {
-                resultMessage.innerHTML = `There are 21 meme crad but 🎉 You got <strong>${correctCount}</strong> out of <strong>${totalCorrect}</strong> memes correct!<br/>Well done!`;
-
-                // Optionally: Change image based on score
-                const resultImage = document.getElementById('result-image');
-                if (correctCount === totalCorrect) {
-                    resultImage.src = "https://cdn-icons-png.flaticon.com/512/477/477188.png"; // success
-                } else if (correctCount === 0) {
-                    resultImage.src = "https://cdn-icons-png.flaticon.com/512/1828/1828843.png"; // fail
-                } else {
-                    resultImage.src = "https://cdn-icons-png.flaticon.com/512/427/427735.png"; // mid result
-                }
-
-            }, 2000);
-        }); 
-    </script>
-
+      </script>
 
     <!-- FULL WEBSITE FUNCTIONALITY -->
 

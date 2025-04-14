@@ -2,14 +2,30 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
     background: #fff;
     padding: 16px 20px;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    max-width: 800px;
+    max-width: 700px;
   }
 
+  /* Selected quiz card */
+  .quiz-card {
+    cursor: pointer;
+    transition: 0.3s ease;
+    border: 2px solid transparent;
+  }
+  
+  .quiz-card.selected {
+    border-color: green;
+    background-color: #e6ffe6;
+  }
+  
+  .quiz-card.faded {
+    opacity: 0.5;
+  }
+  
   .contributor {
     display: flex;
     align-items: center;
@@ -91,9 +107,12 @@
     align-items: center;
   }
 
+
   @media (max-width: 600px) {
     .contributor-wrapper {
-      flex-direction: column;
+      flex-direction: row;
       align-items: flex-start;
+      padding-bottom: 30px;
+
     }
   }

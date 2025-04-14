@@ -997,7 +997,6 @@
           const resultSection = document.getElementById("quiz-result");
       
           viewBtn.addEventListener("click", function () {
-            // Check if all quizzes have a selected card
             const allAnswered = Array.from(quizGrids).every(grid =>
               grid.querySelector(".quiz-card.selected")
             );
@@ -1007,25 +1006,30 @@
               return;
             }
       
-            // Show result (but don't hide quiz)
             resultSection.style.display = "block";
       
-            // Optional: Set the result dynamically
             document.querySelector(".result-title").innerText = "Burger";
             document.querySelector(".result-description").innerText =
-              "You’re burgers. We’re talkin’ McDonald’s, Burger King, Wendy’s, every burger place. You are the ultimate fast food. Everyone wishes they could be you. Do you have a lot of friends? If not, you should. You’ve got popular kid energy.";
+              "You’re burgers. We’re talkin’ McDonald’s, Burger King, Wendy’s, every burger place...";
             document.querySelector(".result-img").src =
               "https://i.giphy.com/KGjsxf6oFafgj5UWsb.webp";
           });
       
-          // Add selection effect to quiz cards
+          // ✅ Fix: make faded cards still clickable and re-selectable
           quizGrids.forEach((grid) => {
             const cards = grid.querySelectorAll(".quiz-card");
       
-            cards.forEach(card => {
+            cards.forEach((card) => {
               card.addEventListener("click", () => {
-                cards.forEach(c => c.classList.remove("selected", "faded"));
+                // Always allow changing the selection
+                cards.forEach(c => {
+                  c.classList.remove("selected", "faded");
+                });
+      
+                // Select the clicked one
                 card.classList.add("selected");
+      
+                // Fade others
                 cards.forEach(c => {
                   if (c !== card) c.classList.add("faded");
                 });
@@ -1034,6 +1038,8 @@
           });
         });
       </script>
+      
+      
            
     <script>
         document.addEventListener("DOMContentLoaded", function () {

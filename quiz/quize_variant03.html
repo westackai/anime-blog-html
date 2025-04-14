@@ -986,8 +986,7 @@
           const viewBtn = document.querySelector(".view-btn");
           const resultSection = document.getElementById("quiz-result");
       
-          viewBtn.addEventListener("click", function () {
-            // Check if all quizzes have a selected card
+          viewBtn?.addEventListener("click", function () {
             const allAnswered = Array.from(quizGrids).every(grid =>
               grid.querySelector(".quiz-card.selected")
             );
@@ -997,25 +996,27 @@
               return;
             }
       
-            // Show result (but don't hide quiz)
             resultSection.style.display = "block";
-      
-            // Optional: Set the result dynamically
-            document.querySelector(".result-title").innerText = "Burger";
+            document.querySelector(".result-title").innerText = "You're a Burger!";
             document.querySelector(".result-description").innerText =
-              "You’re burgers. We’re talkin’ McDonald’s, Burger King, Wendy’s, every burger place. You are the ultimate fast food. Everyone wishes they could be you. Do you have a lot of friends? If not, you should. You’ve got popular kid energy.";
+              "Fun, tasty, and loved by many!";
             document.querySelector(".result-img").src =
               "https://i.giphy.com/KGjsxf6oFafgj5UWsb.webp";
           });
       
-          // Add selection effect to quiz cards
+          // ✅ FIX: Make cards toggleable and reselectable
           quizGrids.forEach((grid) => {
             const cards = grid.querySelectorAll(".quiz-card");
       
-            cards.forEach(card => {
+            cards.forEach((card) => {
               card.addEventListener("click", () => {
+                // Deselect all cards in this grid
                 cards.forEach(c => c.classList.remove("selected", "faded"));
+      
+                // Select clicked card
                 card.classList.add("selected");
+      
+                // Fade others
                 cards.forEach(c => {
                   if (c !== card) c.classList.add("faded");
                 });
@@ -1024,7 +1025,7 @@
           });
         });
       </script>
-           
+      
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const mobileToggle = document.querySelector(".mobile-menu-toggle");
