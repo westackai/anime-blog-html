@@ -45,12 +45,12 @@ img {
   display: block;
 }
 
-.container {
+/* .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
   position: relative;
-}
+} */
 
 /* //Heading */
 
@@ -138,11 +138,11 @@ header {
   justify-content: center;
 }
 
-.container {
+/* .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
-}
+} */
 
 .main-nav {
   background-color: #fff;
@@ -226,57 +226,6 @@ header {
   .header-main {
     display: none;
   }
-}
-.carousel-container {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-}
-.articles-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  padding: 0 20px;
-  transition: transform 0.5s ease-in-out;
-}
-
-.article {
-  width: 23%;
-  margin: 0 1%;
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
-  border-radius: 4px;
-  flex: 0 0 calc(25% - 10px); /* 4 items at a time */
-  box-sizing: border-box;
-}
-
-.article-img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  transition: transform 0.5s;
-  display: block;
-}
-
-.article:hover .article-img {
-  transform: scale(1.05);
-}
-
-.articles-container .article-title {
-  text-align: center;
-  font-size: 16px;
-  font-weight: bold;
-  margin: 0;
-  padding: 15px 10px;
-  text-transform: uppercase;
-  line-height: 1.4;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .navigation {
@@ -677,8 +626,7 @@ footer {
   margin-bottom: 40px;
 }
 
-.footer-widget {
-}
+
 
 .footer-widget h3 {
   font-size: 20px;
@@ -2049,6 +1997,160 @@ max-height: 400px;
     cursor: pointer;
     z-index: 1001;
     color: white;
+
+    transition: opacity 0.3s ease;
+  }
+
+  .contents-list {
+    list-style: none;
+    padding: 5px 0;
+    display: block;
+  }
+
+  /* index */
+  .featured-main {
+    position: relative;
+    height: 500px;
+    overflow: hidden;
+  }
+  .featured-side {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+  }
+  .news-item {
+    height: 100%;
+    background-color: none;
+    box-shadow: inset;
+  }
+  .news-item a {
+    position: relative;
+  }
+  .details-news-img {
+    height: 300px !important;
+  }
+
+  .featured-side-item {
+    position: relative;
+    height: 291px;
+    overflow: hidden;
+    border: 1px solid #dddddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    width: 163px;
+    max-width: 163px;
+  }
+
+  .featured-side-item img {
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+  }
+
+  .featured-side-info {
+    display: block;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    color: #000;
+  }
+  .news-title {
+    color: white;
+  }
+
+  .featured-side-block1 {
+    display: flex;
+    grid-template-columns: none;
+    flex-direction: column;
+    width: 100%;
+  }
+
+
+  .news-contant-data {
+    position: absolute;
+  }
+
+  .news-content-1 h3 {
+    font-size: 14px !important;
+  }
+  .category {
+    color: white !important;
+    background-color: #6666;
+    border-radius: 2px;
+    padding-inline: 15px;
+  }
+
+  .news-img {
+    height: 142px;
+    overflow: hidden;
+  }
+
+  .featured-side-block1 a {
+    position: relative;
+  }
+  .news-content {
+    position: absolute;
+    bottom: 10px;
+    z-index: 1;
+    padding: 5px;
+    font-size: 10px;
+  }
+  .news-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+  }
+
+  .news-img:hover img {
+    transform: scale(1.05);
+  }
+
+  .featured-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .featured-side-info {
+    position: absolute;
+    bottom: 10px;
+    z-index: 1;
+    padding: 5px;
+    color: white;
+  }
+
+  .featured-info {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+    color: #fff;
+  }
+  .news-item,
+.featured-side-block1 a,
+.most-look-div {
+  position: relative;
+
+}
+
+  .news-item::after,
+  .featured-side-block1 a::after,
+  .most-look-div::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%; /* adjust for how much shadow you want */
+    background: linear-gradient(to top, rgba(28, 2, 2, 0.5), transparent);
+    z-index: 0;
+    pointer-events: none;
   }
 }
 
@@ -2109,10 +2211,82 @@ max-height: 400px;
   .categories-title h1 {
     font-size: 24px;
   }
+
+  
+/* BOOTSTRAP */
+nav a {
+  display: block;
+  padding: 20px;
+  margin:px;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+  
+}
+
+nav a:hover {
+  /* background-color: #000000; */
+  color: white;
+}
+
+.nav {
+  background-color: #fff;
+  padding: 8px;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-color: #dddddd;
+  position: relative;  
+}
+
+/* Style for active menu item when dropdown is being hovered */
+.nav li.dropdown:hover > a {
+  background-color: #000;
+  color: white;
+}
+
+.dropdown-item {
+  font-size: 17px;
+  margin: 18px;
+}
+
+#heading{
+  font-size: 16.5px;
+  font-weight: bolder;
+}
+
+.dropdown-item {
+  background-color: rgb(242, 244, 244);
+  width: auto;
+}
+
+.dropdown-item:hover {
+  background-color: #dddfe1;
+}
+
+.nav #heading:hover {
+  background-color: black;
+  color: white;
+  height: auto;
+}
+
+.nav #heading {
+  padding: px;
+}
+
 }
 
 /* Additional mobile optimizations */
 @media (max-width: 480px) {
+
+  .container #heading {
+    flex-direction: column;   /* ⬅️ stack items vertically */
+    align-items: flex-start;  /* or center if you want */
+    gap: 10px;
+    padding: 10px;
+    
+  }
+
   .style-card-img {
     height: 150px;
   }
@@ -2138,6 +2312,66 @@ max-height: 400px;
     padding: 3px 6px;
     font-size: 12px;
   }
+
+  
+/* BOOTSTRAP */
+nav a {
+  display: block;
+  padding: 20px;
+  margin:px;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+  
+}
+
+nav a:hover {
+  /* background-color: #000000; */
+  color: white;
+}
+
+.nav {
+  background-color: #fff;
+  padding: 8px;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-color: #dddddd;
+  position: relative;  
+}
+
+/* Style for active menu item when dropdown is being hovered */
+.nav li.dropdown:hover > a {
+  background-color: #000;
+  color: white;
+}
+
+.dropdown-item {
+  font-size: 17px;
+  margin: 18px;
+}
+
+#heading{
+  font-size: 16.5px;
+  font-weight: bolder;
+}
+
+.dropdown-item {
+  background-color: rgb(242, 244, 244);
+  width: auto;
+}
+
+.dropdown-item:hover {
+  background-color: #dddfe1;
+}
+
+.nav #heading:hover {
+  background-color: black;
+  color: white;
+  height: auto;
+}
+
+
 }
 
 .category-container {
@@ -2412,4 +2646,142 @@ body {
 
 .main-heading {
   font-size: 40px;
+}
+
+/* BOOTSTRAP */
+nav a {
+  display: block;
+  padding: 20px;
+  margin:px;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+  
+}
+
+nav a:hover {
+  /* background-color: #000000; */
+  color: white;
+}
+
+.nav {
+  background-color: #fff;
+  padding: 8px;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-color: #dddddd;
+  position: relative;  
+}
+
+/* Style for active menu item when dropdown is being hovered */
+.nav li.dropdown:hover > a {
+  background-color: #000;
+  color: white;
+}
+
+.dropdown-item {
+  font-size: 17px;
+  margin: 18px;
+}
+
+#heading{
+  font-size: 16.5px;
+  font-weight: bolder;
+}
+
+.dropdown-item {
+  background-color: rgb(242, 244, 244);
+  width: auto;
+}
+
+.dropdown-item:hover {
+  background-color: #dddfe1;
+}
+
+.nav #heading:hover {
+  background-color: black;
+  color: white;
+  height: auto;
+}
+
+.nav #heading {
+  padding: px;
+}
+
+/* ✅ Basic spacing & appearance */
+#heading {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* ✅ Make dropdown-menu hide on small view by default (Bootstrap handles toggle via JS) */
+.dropdown-menu {
+  position: absolute;
+}
+
+/* ✅ Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .nav .container {
+    flex-direction: column !important;  /* 👈 Stack all buttons vertically */
+    align-items: flex-start;
+  }
+
+  #heading {
+    width: 100%;
+    text-align: left;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    left: auto;
+    display: none;
+  }
+
+  .dropdown-menu {
+    position: static;         /* So it flows with the content */
+    width: 100%;
+    margin-bottom: 10px;
+    display: none;
+  }
+
+
+  .dropdown-item {
+    background-color: rgb(237, 238, 238);
+    width: auto;
+    margin-right: 20px;
+    padding-right: 22px;
+    display: none;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #dddfe1;
+  }
+
+  .categories-header {
+    background-color: red;
+  }
+
+  .nav-item {
+    font-size: 29px;
+    margin: 7px;
+    
+  }
+
+  #item{
+    color: black;
+    font-weight: bolder; 
+  }
+
+  #item:hover{
+    background-color: rgb(179, 177, 175);
+  }
+
+  #sideNavbar {
+    width: 100%;
+  }
+
+  #close-btn {
+    font-size: 25px;
+    margin-top: px;
+    right: 0%;
+  }
 }
