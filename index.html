@@ -7,10 +7,20 @@
     <title>Newspaper Gossip Pro</title>
     <link rel="stylesheet" href="/style.css" />
     <script src="/assets/js/script.js"></script>
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.sw.js"></script>
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    <script>
+        window.OneSignalDeferred = window.OneSignalDeferred || [];
+        OneSignalDeferred.push(async function (OneSignal) {
+            await OneSignal.init({
+                appId: "58f8c1c5-54a6-472d-9ba0-2b12c0ff0dd2",
+            });
+        });
+    </script>
 </head>
 
 <body>
-    
+
     <header>
         <div class="categories-header">
             <nav class="main-nav">
